@@ -3,6 +3,14 @@
 // Call this function when the page loads (the "ready" event)
 $(document).ready(function() {
 	initializePage();
+
+	//Defind click function
+	$('.friend a').click(function(e){
+		//prevent page form loading
+		e.preventDefault();
+		//call anagramName
+		$(this).find('h3').text(anagrammedName($(this).text()));
+	});
 })
 
 /*
